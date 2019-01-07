@@ -1,0 +1,12 @@
+.navbar-nav{
+    display: flex;
+    flex: 1;
+}
+
+.wrapper{
+    padding:30px;
+}
+
+nav{
+    background-image: linear-gradient(to right,#007bff, #80baeb);
+}

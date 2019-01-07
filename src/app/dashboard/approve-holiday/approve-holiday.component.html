@@ -1,0 +1,23 @@
+<div class="container" *ngIf="requests.length !== 0">
+  <div class="card" *ngFor="let request of requests">
+    <div class="card-body">
+      <h5 class="card-title">Holiday Request</h5>
+      <p class="card-text">
+        Email: <strong>{{request.email}}</strong>
+      </p>
+      <p class="card-text">
+        Reason: <strong>{{request.reason}}</strong>
+      </p>
+      <p class="card-text">
+        Period: <strong>{{request.startDate | date}} - {{request.endDate | date}} </strong>
+      </p>
+      <div style="margin-left:auto">
+        <button type="button" (click)="toggleRequestStatus(request,2)" class="btn btn-danger">Reject</button>
+        <button type="button" (click)="toggleRequestStatus(request,1)" class="btn btn-success">Approve</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="requests.length === 0" class="alert alert-warning" role="alert">
+  There are no pending request waiting for approval!
+</div>

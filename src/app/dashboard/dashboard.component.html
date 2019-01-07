@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <img class="mb-4" src="../../assets/brand/icon.png" alt="" width="50" height="50" class="img">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item " (click)="collapse()">
+        <a class="nav-link" routerLinkActive="active" routerLink="request">Request</a>
+      </li>
+      <li *ngIf="currentUser?.isApprover" class="nav-item " (click)="collapse()">
+        <a class="nav-link" routerLinkActive="active" routerLink="approve">Approve</a>
+      </li>
+      <li  class="nav-item " (click)="collapse()">
+        <a class="nav-link" routerLinkActive="active" routerLink="history">History</a>
+      </li>
+      <li class="ml-auto">
+        <a class="nav-link" (click)="signOut()">Sign Out</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<div class="wrapper">
+  <router-outlet></router-outlet>
+</div>

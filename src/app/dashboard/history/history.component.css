@@ -1,0 +1,15 @@
+.card{
+    margin-bottom: 18px;
+}
+
+.card-title{
+    border-bottom: 1px solid rgb(64, 201, 255);
+    padding-bottom: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
